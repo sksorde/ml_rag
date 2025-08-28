@@ -1,6 +1,6 @@
 streamlit
 langchain
-langchain-community==0.0.147
+langchain>=0.0.193
 sentence-transformers
 faiss-cpu
 python-dotenv

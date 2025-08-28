@@ -12,8 +12,9 @@ from langchain.text_splitter import CharacterTextSplitter
 
 # Load .env variables
 load_dotenv()
-hf_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+#hf_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 #openai_key = os.getenv("OPENAI_API_KEY")
+hf_key = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 # Streamlit UI setup
 st.set_page_config(page_title="📚 RAG Chatbot", layout="wide")
@@ -61,3 +62,4 @@ if uploaded_file:
             answer = qa_chain.run(question)
         st.subheader("💡 Answer")
         st.write(answer)
+
